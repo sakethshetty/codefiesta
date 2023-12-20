@@ -1,24 +1,22 @@
 import { publicProcedure, router } from './trpc';
 import z from 'zod'
-import {pool} from './database'
+import { pool } from './database'
 
 export const appRouter = router({
     // ...
-    userById: publicProcedure.input((val: unknown) => {
-
-        // If the value is of type string, return it.
-        // It will now be inferred as a string.
-        if (typeof val === 'string') return val;
-
-        // Uh oh, looks like that input wasn't a string.
-        // We will throw an error instead of running the procedure.
-        throw new Error(`Invalid input: ${typeof val}`);
-    })
+    getUser: publicProcedure
+        .query(
+            async () => {
+                const user = await pool.query("select user_name from  users");
+            }
+        ),
+    userById: publicProcedure
+        .input(z.string())
         .query(async (opts) => {
-
             const { input } = opts;
             // Retrieve the user with the given ID
-            const user = await pool.query("select * from users");
+            const user = await pool.query("select * from users")
+            console.log(user)
             return user;
         }),
 
