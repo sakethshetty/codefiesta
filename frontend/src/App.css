@@ -36,3 +36,158 @@
     transform: rotate(360deg);
   }
 }
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.header img {
+  width: 100px;
+  height: auto;
+}
+
+.header h1 {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  color: #333333;
+}
+
+.header nav {
+  display: flex;
+}
+
+.header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header nav ul li {
+  display: inline-block;
+}
+
+.header nav ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333333;
+}
+
+.header nav ul li a:hover {
+  background-color: #cccccc;
+}
+
+
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+/* Style the table header */
+thead {
+  background-color: #f0f0f0;
+}
+
+/* Style the table cells */
+th, td {
+  padding: 10px;
+  border: 1px solid #cccccc;
+  text-align: center;
+}
+
+/* Style the rank column */
+th:first-child, td:first-child {
+  width: 10%;
+}
+
+/* Style the name column */
+th:nth-child(2), td:nth-child(2) {
+  width: 50%;
+  text-align: left;
+}
+
+/* Style the score column */
+th:last-child, td:last-child {
+  width: 40%;
+}
+
+/* Style the first three rows with different colors */
+tbody tr:nth-child(1) {
+  background-color: gold;
+}
+
+tbody tr:nth-child(2) {
+  background-color: silver;
+}
+
+tbody tr:nth-child(3) {
+  background-color: #cd7f32;
+}
+
+/* Define a style for the form */
+.form {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* Define a style for the form groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Define a style for the form labels */
+.form-group label {
+  font-weight: bold;
+}
+
+/* Define a style for the form inputs */
+.form-input {
+  margin: 10px;
+}
+
+/* Define a style for the form checkbox */
+.form-checkbox {
+  margin-left: 10px;
+}
+
+/* Define a style for the form buttons */
+.form-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Define a style for the buttons */
+.btn {
+  width: 50px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+/* Define a style for the set button */
+.btn-set {
+  background-color: green;
+}
+
+/* Define a style for the delete all button */
+.btn-delete {
+  background-color: red;
+}
+

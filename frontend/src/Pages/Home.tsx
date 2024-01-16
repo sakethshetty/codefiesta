@@ -1,14 +1,16 @@
-import {trpc} from '../lib/trpc'
+import Header from '../components/Header';
+import LeaderBoard from '../components/LeaderBoard';
+import { trpc } from '../lib/trpc'
 
 function Home() {
-
-    const  response = trpc.userById.useQuery('1')
-
-    console.log(response)
-    console.log(response.data)
+    const resp = trpc.getLeaderBoard.useQuery();
+    console.log(resp);
 
     return (
-        <div>Home</div>
+        <>
+            <Header/>
+            <LeaderBoard leaderboard={resp.data} />
+        </>
     )
 }
 
